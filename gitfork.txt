@@ -1,0 +1,47 @@
+Git 
+
+Git Fork
+
+digunakan kalau ikutan open source project
+setiap developer akan mendapatkan 2 repository karena servernya di clone. 
+private local repo dan public server
+kontribusi terjadi di private local dan tidak di push ke public server
+hanya project maintainer yang push ke official repo.
+
+1. clone the server
+ git clone https:bbbbbb/repo.git
+
+2. add remote
+ git remote add upstream https://bitbucket.org/maintainer/repo
+
+kalau upstream repo has authentication enabled (bukan open source) harus supply username:
+ git remote add upstream https://user@bitbucket.org/maintainer/repo.git
+
+3. di local copy, developer bisa making changes, push changes. changesnya masih private sampai akhirnya di pull
+ git checkout -b someFeature
+ add some code
+ git commit -a -m "aaded some feature"
+
+4. Pull ketika projectnya sudah ready
+ git pull upstream master
+
+------
+
+Ketika sudah ready untuk share new feature ada 2 hal yang harus dilakukan:
+1. bikin contributionnya aksesibel bagi orang lain dengan pushing to public repo
+ git push origin feature-branch
+
+2. notify project maintainer kalau kamu mau merge into official codebase -> dengan pull request
+
+
+-----
+sample of forking workflow:
+
+- You want to contribute to an open source library hosted at bitbucket.org/userA/open-project
+- Using Bitbucket you create a fork of the repo to bitbucket.org/YourName/open-project
+  On your local system you execute git clone on https://bitbucket.org/YourName/open-project to get a local copy of the repo
+- You create a new feature branch in your local repo
+- Work is done to complete the new feature and git commit is executed to save the changes
+- You then push the new feature branch to your remote forked repo
+- Using Bitbucket you open up a pull request for the new branch against the original repo at bitbucket.org/userA/open-project
+

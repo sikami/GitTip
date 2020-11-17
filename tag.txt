@@ -1,0 +1,35 @@
+GIT TAG
+
+to tag a finished product do this:
+1. annotated tag (ada tagger name, tagging message, can be signed and verified, pokoknya lengkap data2nya)
+	git tag -a v1.2 -m "versi 1.2"
+
+jadi kalau mau di lihat:
+	git show v1.2
+	git list -l
+
+2. lightweight tag (gak lengkap infonya)
+	git tag v1.2 -lw
+	
+	kalau di git show, yang terlihat hanya commitnya saja dan yang ngekomit.
+
+
+kalau lupa tagging abis commit bisa balik lagi:
+	git tag -a v1.2 9fceb02 (9fce-- itu adalah nmor komit nya)
+
+untuk Push ke server, harus lengkap 
+	git push origin v1.5
+	atau
+	git push origin --tags
+
+untuk DELETE tags
+
+	git tag -d <tagname>
+	git tag -d v1.2 -lw
+
+untuk DELETE tags dari remove server
+	git push <remote> :refs/tags/<tagname>
+	git push origin :refs/tags/v1.2-lw
+	or
+	git push origin --delete <tagname>
+	

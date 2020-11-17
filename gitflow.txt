@@ -1,0 +1,64 @@
+GIT 
+
+Git flow
+
+1. execute gitflow
+ git flow init
+
+
+2. copy the master branch name: develop, then push to server (this will contain all history of project)
+ git branch develop git push -u origin develop
+
+
+3. feature branch, gunaakan feature develop daripada master, jadi kalau ada perubahan, mergenya ke develop
+kalau tidak gunakan git flow caranya:
+ git checkout develop git checkout -b feature_branch
+
+kalau gunakan git flow:
+ git flow feature start feature_branch
+
+
+4. Kalau sudah selesai dengan development, merge feature_brach ke develop
+tanpa git flow:
+ git checkout develop git merge feature_branch
+
+dengan git flow:
+ git flow feature finish feature_branch
+
+-----------------
+5. ketika develop sudah penuh dan siap utk di release, fork release branch dari develop.
+branch release hanya bisa bug fixes:
+
+tanpa gitflow:
+ git checkout develop git checkout -b release/0.1.0
+
+dengan gitflow:
+ fit flow release start 0.1.0 Switched to a new branch 'release/0.1.0'
+
+6. Ketika sudah siap semuanya harus merge ke master dan develop, lalu release branch akan terhapus
+to finish release branch:
+
+tanpa gitflow:
+ git checkout master git merge release/0.1.0
+dengan gitflow:
+ git flow release finish '0.1.0'
+
+
+----
+overall flow of git flow:
+
+The overall flow of Gitflow is:
+
+A develop branch is created from master
+A release branch is created from develop
+Feature branches are created from develop
+When a feature is complete it is merged into the develop branch
+When the release branch is done it is merged into develop and master
+If an issue in master is detected a hotfix branch is created from master
+Once the hotfix is complete it is merged to both develop and master
+
+
+
+
+
+

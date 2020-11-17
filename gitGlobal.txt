@@ -1,0 +1,17 @@
+GIT
+
+to set up your Git on the cloud
+1. specify username
+   git config --global user.name "listya"
+2. specify user email
+   git config --global user.email "bala@gmail.com"
+
+// to show the user name and registered user
+ git config --global --list
+
+// to show only username
+ git config --global user.name
+
+// to show only user email
+ git config --global user.email
+ 

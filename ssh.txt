@@ -1,0 +1,6 @@
+SSH generate
+
+to generate SSH in computer:
+in CLI: ssh-keygen
+
+then specify the directory to safe the file in.
