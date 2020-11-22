@@ -1,0 +1,26 @@
+Git Ignore
+
+if git ignore is created after you pushed repository to github:
+	git rm -r --cached some-directory
+	git commit -m 'Remove the now ignored directory "some-directory"'
+	git push origin master	
+
+
+how to create git:
+	make a file named .gitignore
+	put all ignored file in .gitignore
+
+* is used as a wildcard match
+/ is used to ignore pathnames relative to the .gitignore file
+# is used to add comments to a .gitignore file
+
+contoh di gitignore:
+# ignore file apa
+/home/listya/Documents/   ->ini akan mengignore semua files di Documents
+
+# ignore individual file
+.file_nama_apa
+
+# ignore semua file
+*.iml	->ignore semua file ekstensi .iml
+
