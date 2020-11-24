@@ -1,0 +1,24 @@
+TO JOIN OPEN SOURCE
+find the opensource project
+gitfork it (it will create repository on mine)
+clone the url
+
+CREATE NEW BRANCH
+git checkout -b add-branchname
+contoh: git checkout -b add-listya-branch (add disini tidak berarti apa2)
+
+CHANGE SOMETHING
+ADD THE CHANGES
+git add something.txt
+
+COMMIT
+git commit -m "added something.txt"
+
+PUSH
+git push origin add-branchname
+
+
+THEN LOOK AT THE ORIGIN REPOSITORY
+CLICK ON COMPARE AND PULL
+
+ 

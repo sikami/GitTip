@@ -1,0 +1,7 @@
+TO FIND REMOTE REPOSITORY URL
+git config --get remote.origin.url
+
+TO CHANGE REPOSITORY URL REMOTE
+git remote set-url origin git@github.blah.blah.blah
+
+
