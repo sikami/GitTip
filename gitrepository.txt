@@ -1,0 +1,21 @@
+====================
+TO START GIT FROM CLI
+====================
+
+echo "# wishlishHunt2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:sikami/wishlishHunt2.git
+git push -u origin main
+
+===========================
+PUSH EXISTING REPO FROM CLI
+==========================
+git remote add origin git@github.com:sikami/wishlishHunt2.git
+git branch -M main
+git push -u origin main
+
+
+                
