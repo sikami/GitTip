@@ -1,0 +1,34 @@
+GIT REVERT -->like UNDO after you commited a bad commit
+creates new commit
+adds new history to project 
+DOESNT modify existing history
+
+GIT CHECKOUT
+checks out content, put you in work tree
+changed the branch you work on
+doesnt make changes to history
+
+GIT RESET
+modifies staging area
+changes which commit a branch head is curently pointing at
+alter existing history
+
+
+example:
+
+C
+B
+A
+
+git revert B, will create a commit that undoes changes in B.
+
+git revert A, will create a commit that undoes changes in A, but will not touch changes in B
+
+Note that if changes in B are dependent on changes in A, the revert of A is not possible.
+
+git reset --soft A, will change the commit history and repository; staging and working directory will still be at state of C.
+
+git reset --mixed A, will change the commit history, repository, and staging; working directory will still be at state of C.
+
+git reset --hard A, will change the commit history, repository, staging and working directory; you will go back to the state of A completely.
+
